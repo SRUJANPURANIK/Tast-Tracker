@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Task Tracker
 
 A simple Flask web app for tracking to-do tasks. Built as a learning
@@ -90,3 +91,6 @@ From now on, every time you `git push` to `main`, Render automatically redeploys
 - Switch from JSON file storage to a real database (SQLite)
 - Add user accounts so each person has their own task list
 - Add categories/tags and filtering
+=======
+# Tast-Tracker
+>>>>>>> 2e9fdfaceebc9f05358f4d08c231106f5720e167
