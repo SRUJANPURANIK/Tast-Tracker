@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# App data (don't commit your personal task list)
+tasks.json
+
+# Editor
+.vscode/
+.DS_Store

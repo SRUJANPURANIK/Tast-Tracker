@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Task Tracker</h1>
+
+        <form action="/add" method="POST" class="add-form">
+            <input type="text" name="task" placeholder="What do you need to do?" required>
+            <button type="submit">Add</button>
+        </form>
+
+        <ul class="task-list">
+            {% for task in tasks %}
+                <li class="{{ 'done' if task.done else '' }}">
+                    <span class="task-text">{{ task.text }}</span>
+                    <span class="actions">
+                        <a href="/complete/{{ loop.index0 }}" title="Toggle complete">✔</a>
+                        <a href="/delete/{{ loop.index0 }}" title="Delete">✖</a>
+                    </span>
+                </li>
+            {% else %}
+                <li class="empty">No tasks yet. Add one above!</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
